@@ -52,9 +52,11 @@ export const TodoProvider: React.FC<ITodoProviderProps> = ({ children }) => {
 
   const handleSubmitTodo = async (values: IFormValues) => {
     try {
-      isEditing
-        ? await todoServices.updateTodo(currentSelectedItem.todoId, values)
-        : await todoServices.postAddTodo(values);
+      if (isEditing) {
+        await todoServices.updateTodo(currentSelectedItem.todoId, values);
+      } else {
+        await todoServices.postAddTodo(values);
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -63,7 +65,7 @@ export const TodoProvider: React.FC<ITodoProviderProps> = ({ children }) => {
       }
       formLogin.resetFields();
       setCurrentSelectedItem({} as IDataTodo);
-      fetchTodos()
+      fetchTodos();
     }
   };
 
@@ -76,12 +78,12 @@ export const TodoProvider: React.FC<ITodoProviderProps> = ({ children }) => {
 
   const handleDelete = async (item: IDataTodo) => {
     try {
-      const response = await todoServices.deleteTodo(item?.todoId)
-      console.log(response, "Response")
+      const response = await todoServices.deleteTodo(item?.todoId);
+      console.log(response, "Response");
     } catch (error) {
       console.log(error);
-    }finally{
-      fetchTodos()
+    } finally {
+      fetchTodos();
     }
   };
 
@@ -93,7 +95,7 @@ export const TodoProvider: React.FC<ITodoProviderProps> = ({ children }) => {
     fetchTodos,
     handleSubmitTodo,
     handleUpdateTodo,
-    handleDelete
+    handleDelete,
   };
   return (
     <TodoContext.Provider value={valuesProvider}>
