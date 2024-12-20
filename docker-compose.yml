@@ -5,8 +5,6 @@ services:
     build:
       context: ./api-todo
     container_name: api-todo
-    volumes:
-      - ./api-todo:/app 
     ports:
       - "3000:3000" 
     environment:
@@ -19,8 +17,6 @@ services:
     build:
       context: ./todo-app  
     container_name: todo-app
-    volumes:
-      - ./todo-app:/app 
     ports:
       - "5173:5173"
     networks:
