@@ -27,7 +27,7 @@ To install the application, simply follow these steps:
 1. Clone this repository
 
 ```
-https://github.com/agustinLoag/compose-mono-repo.git
+git clone https://github.com/agustinLoag/compose-mono-repo.git
 cd compose-mono-repo
 ```
 
