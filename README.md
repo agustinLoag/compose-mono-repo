@@ -1,8 +1,8 @@
-<h1 align="center" id="title">TODO APP LIsta</h1>
+<h1 align="center" id="title">TODO APP LIST</h1>
 
-<p id="description">Este es el proyecto "Fullstack" usando React en el frontend y NestJs con uso de docker y docker-compose</p>
+<p id="description">This is the “Fullstack” project using React in the frontend and NestJs with use of docker and docker-compose</p>
 
-<h2>💻 Construida con</h2>
+<h2>💻 Built with</h2>
 
 Technologies used in the project:
 
@@ -12,37 +12,37 @@ Technologies used in the project:
 *   Docker
 *   Docker-Compose
 
-<h2>Requisitos</h2>
-Docker y Docker Compose deben estar instalados en tu máquina.
+<h2>Requirements</h2>
+Docker and Docker Compose must be installed on your machine.
 
-Para instalar Docker, puedes seguir los siguientes enlaces según tu sistema operativo:
+To install Docker, you can follow the links below depending on your operating system:
 
-*   <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Instalar Docker en Windows</a>
-*   <a href="https://docs.docker.com/desktop/setup/install/mac-install/">Instalar Docker en macOS</a>
-*   <a href="https://docs.docker.com/desktop/setup/install/linux/">Instalar Docker en Linux</a>
+*   <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Install Docker on Windows</a>
+*   <a href="https://docs.docker.com/desktop/setup/install/mac-install/">Install Docker on macOS</a>
+*   <a href="https://docs.docker.com/desktop/setup/install/linux/">Install Docker on Linux</a>
 
-<h2>Iniciar la Aplicación</h2>
-Para levantar la aplicación, simplemente sigue estos pasos:
+<h2>Start the Application</h2>
+To install the application, simply follow these steps:
 
-1. Clona este repositorio
+1. Clone this repository
 
 ```
 https://github.com/agustinLoag/compose-mono-repo.git
 cd compose-mono-repo
 ```
 
-2. Levanta los contenedores de Docker
+2. Raise Docker containers
 
 ```
 docker-compose up --build
 ```
-3. Accede a la Aplicación
-* El frontend estará disponible en: http://localhost:5173
-* El backend estará disponible en: http://localhost:3000
-* La base de datos PostgreSQL está disponible en el puerto: 5433
+3. Access the Application
+* The frontend will be available at: http://localhost:5173
+* The backend will be available at: http://localhost:3000
+* The PostgreSQL database is available on port: 5433
 
 
 <h2>API DOC.</h2>
-Para ver la documentacion de la api la encuentras en la siguiente linea:
+To check the api documentation you can find it on the following url:
 
-* La documentacion estará disponible en: http://localhost:3000/api
+* The documentation will be available at: http://localhost:3000/api
