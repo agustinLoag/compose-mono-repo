@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./api-todo
+    container_name: api-todo
+    volumes:
+      - ./api-todo:/app 
+    ports:
+      - "3000:3000" 
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin@postgres:5432/todo_db
+    depends_on:
+      - postgres
+    networks:
+      - app-todo-network
+  frontend:
+    build:
+      context: ./todo-app  
+    container_name: todo-app
+    volumes:
+      - ./todo-app:/app 
+    ports:
+      - "5173:5173"
+    networks:
+      - app-todo-network
+  postgres:
+    image: postgres:14-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: todo_db
+    volumes:
+      - postgres-todo-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - app-todo-network
+networks:
+  app-todo-network:
+    driver: bridge
+volumes:
+  postgres-todo-data:
+    driver: local
