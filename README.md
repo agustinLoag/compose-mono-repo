@@ -27,7 +27,7 @@ Para levantar la aplicación, simplemente sigue estos pasos:
 1. Clona este repositorio
 
 ```
-git clone https://github.com/tu_usuario/compose-mono-repo.git
+https://github.com/agustinLoag/compose-mono-repo.git
 cd compose-mono-repo
 ```
 

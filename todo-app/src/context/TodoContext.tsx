@@ -52,7 +52,7 @@ export const TodoProvider: React.FC<ITodoProviderProps> = ({ children }) => {
 
   const handleSubmitTodo = async (values: IFormValues) => {
     try {
-      const response = isEditing
+      isEditing
         ? await todoServices.updateTodo(currentSelectedItem.todoId, values)
         : await todoServices.postAddTodo(values);
     } catch (error) {
